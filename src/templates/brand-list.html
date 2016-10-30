@@ -1,0 +1,44 @@
+{% set brands = [
+	{"link": "/brand-item.html", "title": "title1", "image": "./images/brands1.png"},
+	{"link": "/brand-item.html", "title": "title2", "image": "./images/brands2.png"},
+	{"link": "/brand-item.html", "title": "title3", "image": "./images/brands3.png"},
+	{"link": "/brand-item.html", "title": "title4", "image": "./images/brands4.png"},
+	{"link": "/brand-item.html", "title": "title5", "image": "./images/brands5.png"},
+	{"link": "/brand-item.html", "title": "title6", "image": "./images/brands6.png"},
+	{"link": "/brand-item.html", "title": "title7", "image": "./images/brands7.png"},
+	{"link": "/brand-item.html", "title": "title8", "image": "./images/brands8.png"},
+	{"link": "/brand-item.html", "title": "title1", "image": "./images/brands1.png"},
+	{"link": "/brand-item.html", "title": "title2", "image": "./images/brands2.png"},
+	{"link": "/brand-item.html", "title": "title3", "image": "./images/brands3.png"},
+	{"link": "/brand-item.html", "title": "title4", "image": "./images/brands4.png"},
+	{"link": "/brand-item.html", "title": "title5", "image": "./images/brands5.png"},
+	{"link": "/brand-item.html", "title": "title6", "image": "./images/brands6.png"},
+	{"link": "/brand-item.html", "title": "title7", "image": "./images/brands7.png"},
+	{"link": "/brand-item.html", "title": "title8", "image": "./images/brands8.png"},
+	{"link": "/brand-item.html", "title": "title1", "image": "./images/brands1.png"},
+	{"link": "/brand-item.html", "title": "title2", "image": "./images/brands2.png"},
+	{"link": "/brand-item.html", "title": "title3", "image": "./images/brands3.png"},
+	{"link": "/brand-item.html", "title": "title4", "image": "./images/brands4.png"},
+	{"link": "/brand-item.html", "title": "title5", "image": "./images/brands5.png"},
+	{"link": "/brand-item.html", "title": "title6", "image": "./images/brands6.png"},
+	{"link": "/brand-item.html", "title": "title7", "image": "./images/brands7.png"},
+	{"link": "/brand-item.html", "title": "title8", "image": "./images/brands8.png"},
+	{"link": "/brand-item.html", "title": "title1", "image": "./images/brands1.png"},
+	{"link": "/brand-item.html", "title": "title2", "image": "./images/brands2.png"},
+	{"link": "/brand-item.html", "title": "title3", "image": "./images/brands3.png"},
+	{"link": "/brand-item.html", "title": "title4", "image": "./images/brands4.png"},
+	{"link": "/brand-item.html", "title": "title5", "image": "./images/brands5.png"},
+	{"link": "/brand-item.html", "title": "title6", "image": "./images/brands6.png"},
+	{"link": "/brand-item.html", "title": "title7", "image": "./images/brands7.png"},
+	{"link": "/brand-item.html", "title": "title8", "image": "./images/brands8.png"}
+]%}
+
+<ul class="brand">
+	{% for item in brands %}
+		<li class="brand__item">
+			<a href="{{ item.link }}" class="brand__link">
+				<img src="{{ item.image }}" class="brand__image" alt="{{ item.title }}" />
+			</a>
+		</li>
+	{% endfor %}
+</ul>

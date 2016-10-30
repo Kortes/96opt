@@ -1,0 +1,16 @@
+{% set shares = [
+	{"color": "green", "link": "#", "image": "./images/shares-green.png"},
+	{"color": "purpur", "link": "#", "image": "./images/shares-purpur.png"},
+	{"color": "red", "link": "#", "image": "./images/shares-red.png"},
+	{"color": "blue", "link": "#", "image": "./images/shares-blue.png"}
+]%}
+
+<ul class="shares">
+	{% for item in shares %}
+		<li class="shares__item {% if item.color %}shares__item_color_{{ item.color }}{% endif %}">
+			<a href="{{ item.link }}" class="shares__link">
+				<img src="{{ item.image }}" alt="" class="shares__image" />
+			</a>
+		</li>
+	{% endfor %}
+</ul>

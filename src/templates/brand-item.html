@@ -1,0 +1,42 @@
+{% set brand = {
+	"title": "RAIN",
+	"text": "<p><b>RAIN</b> – «Сила природы-качество жизни»</p><p><b>RAIN</b> – основательный бренд, имеющий положительную историю и знающий себе цену. Немного консервативный, но очень надежный.</p><p>Смесители марки <b>RAIN</b> отличаются оригинальностью дизайна, плавностью регулировки, экономят воду и обладают низким уровнем шума.</p><p><strong>Гарантия на корпус смесителя – 7 лет</strong></p>",
+	"image": "./images/brand-item.png",
+	"products": [
+		{"link": "/product.html", "title": "Смесители Rain"},
+		{"link": "/product.html", "title": "Зап. Части для смесителей"},
+		{"link": "/product.html", "title": "Шланги для душа"},
+		{"link": "/product.html", "title": "Кран-буксы, механизмы шаровые"},
+		{"link": "/product.html", "title": "Аксессуары для душа Rain"},
+		{"link": "/product.html", "title": "Смесители Rain"},
+		{"link": "/product.html", "title": "Зап. Части для смесителей"},
+		{"link": "/product.html", "title": "Шланги для душа"},
+		{"link": "/product.html", "title": "Кран-буксы, механизмы шаровые"},
+		{"link": "/product.html", "title": "Аксессуары для душа Rain"},
+		{"link": "/product.html", "title": "Смесители Rain"},
+		{"link": "/product.html", "title": "Зап. Части для смесителей"},
+		{"link": "/product.html", "title": "Шланги для душа"},
+		{"link": "/product.html", "title": "Кран-буксы, механизмы шаровые"},
+		{"link": "/product.html", "title": "Аксессуары для душа Rain"}
+	]
+}%}
+
+<div class="brand-item">
+	<div class="brand-item__body clearfix">
+		<div class="brand-item__image">
+			<img src="{{ brand.image }}" alt="{{ brand.title }}" class="brand-item__img" />
+		</div>
+		<div class="brand-item__content">
+			<h1>{{ brand.title }}</h1>
+			<div class="brand-item__text">{{ brand.text }}</div>
+		</div>
+	</div>
+	<div class="brand-item__all">Все товары {{ brand.title }}</div>
+	<ul class="brand-item__list">
+		{% for item in brand.products %}
+			<li class="brand-item__product">
+				<a href="{{ item.link }}" class="brand-item__product-link">{{ item.title }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+</div>

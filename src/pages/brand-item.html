@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% set page = {
+	"title": "Сантехника и товары для ванной комнаты RAIN"
+}%}
+
+{% set breadcrumbs = [
+	{"link": "/", "title": "Главная страница"},
+	{"link": "/brands.html", "title": "Наши бренды"}
+]%}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block content %}
+	{% include 'breadcrumbs.html' %}
+	{% include 'brand-item.html' %}
+{% endblock %}

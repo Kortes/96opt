@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% set page = {
+	"title": "Данный раздел на реконструкции"
+}%}
+
+{% set breadcrumbs = [
+	{"link": "/", "title": "Главная страница"},
+	{"link": "/catalog.html", "title": "Каталог"}
+]%}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block content %}
+	{% include 'breadcrumbs.html' %}
+	<h1>{{ page.title }}</h1>
+	<div class="reconstruction">
+		<div class="reconstruction__description">
+			Приносим свои извинения за доставленные неудобства.<br />
+			Посетите его, пожалуйста, позже.
+		</div>
+		<a href="/catalog.html" class="reconstruction__button">Перейти в каталог</a>
+	</div>
+{% endblock %}

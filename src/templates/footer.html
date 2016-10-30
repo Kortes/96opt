@@ -1,0 +1,87 @@
+{% set footer = {
+	"phone": "8 800 775-3116",
+	"sotial": [
+		{"type": "vk", "link": "#"},
+		{"type": "ok", "link": "#"},
+		{"type": "instagram", "link": "#"},
+		{"type": "youtube", "link": "#"},
+		{"type": "fb", "link": "#"}
+	],
+	"menu": [
+		[
+			{"link": "#", "title": "Как оформить заказ"},
+			{"link": "#", "title": "Самовывоз товара"},
+			{"link": "#", "title": "Доставка и оплата"},
+			{"link": "#", "title": "Скидки"},
+			{"link": "#", "title": "Возврат товара"},
+			{"link": "#", "title": "Юридическим лицам"},
+			{"link": "#", "title": "Пользовательское соглашение"},
+			{"link": "#", "title": "Сервисные центры"}
+		],
+		[
+			{"link": "#", "title": "Каталог"},
+			{"link": "#", "title": "Акции и конкурсы"},
+			{"link": "#", "title": "Акционные товары"},
+			{"link": "#", "title": "Распродажа"},
+			{"link": "#", "title": "Новинки"},
+			{"link": "#", "title": "Бренды"}
+		],
+		[
+			{"link": "#", "title": "О компании"},
+			{"link": "#", "title": "Новости"},
+			{"link": "#", "title": "Поставщикам"},
+			{"link": "#", "title": "Вакансии"},
+			{"link": "#", "title": "Тендеры"},
+			{"link": "#", "title": "Франшиза"},
+			{"link": "#", "title": "Арендодателям"}
+		]
+	]
+}%}
+
+<div class="footer">
+	<div class="footer__contact">
+		<div class="container clearfix">
+			<div class="footer__phone">
+				<div class="footer__phone-text">
+					По любым вопросам:<br>
+					(звонок бесплатный)
+				</div>
+				<div class="footer__phone-number">{{ footer.phone }}</div>
+			</div>
+			<div class="footer__sotial">
+				<div class="footer__sotial-text">Присоединяйтесь к нам</div>
+				<ul class="footer__sotial-list">
+					{% for item in footer.sotial -%}
+						<li class="footer__sotial-item footer__sotial-item_{{ item.type }}">
+							<a href="{{ item.link }}" class="footer__sotial-link"></a>
+						</li>
+					{%- endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer__content">
+		<div class="container clearfix">
+			{% include 'singup.html' %}
+			<div class="footer__menu">
+				<ul class="footer__list">
+					{% for item in footer.menu -%}
+						<li class="footer__item">
+							<ul class="footer__group">
+								{% for menu in item %}
+									<li class="footer__group-item">
+										<a href="{{ menu.link }}" class="footer__group-link">{{ menu.title }}</a>
+									</li>
+								{% endfor %}
+							</ul>
+						</li>
+					{%- endfor %}
+				</ul> 
+				<div class="footer__dev">
+					Системный электронный маркетинг - 
+					<a href="http://biksileev.ru/" target="_blank">Студия Дмитрия Биксилеева</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

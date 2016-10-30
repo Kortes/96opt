@@ -1,0 +1,26 @@
+@import "var";
+
+.breadcrumbs{
+
+	&__list{
+		padding: 7px 0 15px;
+		line-height: 30px;
+		color: @c-link;
+		font-size: 12px;
+	}
+
+	&__item,
+	&__separator{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__separator{
+		margin: 0 5px;
+
+		&:last-child{
+			display: none;
+		}
+	}
+
+}

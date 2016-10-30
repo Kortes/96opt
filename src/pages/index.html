@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% set home = {
+	"title": "Главная",
+	"share": {
+		"title": "АКЦИЯ",
+		"color": "purpur",
+		"list": [
+			{"link": "#", "title": "Средство для мытья посуд посуды Капля VOX", "image": "./images/carousel1.png", "price": "1020"},
+			{"link": "#", "title": "Средство для мытья посуд посуды Капля VOX", "image": "./images/carousel2.png", "price": "19"},
+			{"link": "#", "title": "Средство для мытья посуд посуды Капля VOX Средство для мытья посуд посуды Капля VOX", "image": "./images/carousel3.png", "price": "340"},
+			{"link": "#", "title": "Средство для мытья посуд посуды Капля VOX", "image": "./images/carousel4.png", "price": "15"},
+			{"link": "#", "title": "Средство", "image": "./images/carousel5.png", "price": "278"},
+			{"link": "#", "title": "Средство для мытья посуд посуды Капля VOX", "image": "./images/carousel1.png", "price": "1020"},
+			{"link": "#", "title": "Средство для мытья посуд посуды Капля VOX", "image": "./images/carousel2.png", "price": "19"},
+			{"link": "#", "title": "Средство для мытья посуд посуды Капля VOX Средство для мытья посуд посуды Капля VOX", "image": "./images/carousel3.png", "price": "340"},
+			{"link": "#", "title": "Средство для мытья посуд посуды Капля VOX", "image": "./images/carousel4.png", "price": "15"},
+			{"link": "#", "title": "Средство", "image": "./images/carousel5.png", "price": "278"}
+		]
+	},
+	"seasonal": {
+		"title": "Сезонные товары",
+		"color": "green",
+		"list": [
+			{"link": "#", "title": "Средство для мытья посуд посуды Капля VOX", "image": "./images/carousel1.png", "price": "1020"},
+			{"link": "#", "title": "Средство для мытья посуд посуды Капля VOX", "image": "./images/carousel2.png", "price": "19"},
+			{"link": "#", "title": "Средство для мытья посуд посуды Капля VOX Средство для мытья посуд посуды Капля VOX", "image": "./images/carousel3.png", "price": "340"},
+			{"link": "#", "title": "Средство для мытья посуд посуды Капля VOX", "image": "./images/carousel4.png", "price": "15"},
+			{"link": "#", "title": "Средство", "image": "./images/carousel5.png", "price": "278"},
+			{"link": "#", "title": "Средство для мытья посуд посуды Капля VOX", "image": "./images/carousel1.png", "price": "1020"},
+			{"link": "#", "title": "Средство для мытья посуд посуды Капля VOX", "image": "./images/carousel2.png", "price": "19"},
+			{"link": "#", "title": "Средство для мытья посуд посуды Капля VOX Средство для мытья посуд посуды Капля VOX", "image": "./images/carousel3.png", "price": "340"},
+			{"link": "#", "title": "Средство для мытья посуд посуды Капля VOX", "image": "./images/carousel4.png", "price": "15"},
+			{"link": "#", "title": "Средство", "image": "./images/carousel5.png", "price": "278"}
+		]
+	}
+
+}%}
+
+{% set menuOpen = true %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block header %}
+	{{ super() }}
+	<div class="container">
+		{% include 'promo.html' %}
+		{% include 'info.html' %}
+	</div>
+{% endblock %}
+
+{% block content %}
+	{% include 'shares.html' %}
+	{% set carousel = home.share %}
+	{% include 'carousel.html' %}
+
+	{% include 'shares.html' %}
+
+	{% include 'category.html' %}
+
+	{% set carousel = home.seasonal %}
+	{% include 'carousel.html' %}
+
+	{% include 'brands.html' %}
+{% endblock %}
+
+{% block script %}
+    <script src="ui/customCarousel/customCarousel.js"></script>
+{% endblock %}

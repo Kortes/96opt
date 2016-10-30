@@ -1,0 +1,28 @@
+{% set menu = [
+	{"link": "#", "title": "Кафе, бары, рестораны", "bg": true},
+	{"link": "#", "title": "Посуда и предметы для сервировки стола", "bg": true},
+	{"link": "#", "title": "Кухонная утварь и посуда для приготовления", "bg": true},
+	{"link": "#", "title": "Для сада и огорода"},
+	{"link": "#", "title": "Для дачи и пикника"},
+	{"link": "#", "title": "Хозяйственные товары"},
+	{"link": "#", "title": "Интерьер"},
+	{"link": "#", "title": "Для детей"},
+	{"link": "#", "title": "Для активного отдыха"},
+	{"link": "#", "title": "Светотехника"},
+	{"link": "#", "title": "Светильники, люстры"},
+	{"link": "#", "title": "Бытовая техника"},
+	{"link": "#", "title": "Новый год"}
+]%}
+
+<div class="menu {% if menuOpen %}menu_open{% endif %}">
+	<div class="menu__wrapper">
+		<a href="#" class="menu__button"><span class="menu__button-title">Каталог товаров</span></a>
+		<ul class="menu__list">
+			{% for item in menu %}
+				<li class="menu__item {% if item.bg %}menu__item_bg{% endif %}">
+					<a href="{{ item.link }}" class="menu__link">{{ item.title }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

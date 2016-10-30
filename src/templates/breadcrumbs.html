@@ -1,0 +1,12 @@
+<div class="breadcrumbs">
+	<ul class="breadcrumbs__list">
+		{% for item in breadcrumbs -%}
+			<li class="breadcrumbs__item">
+				<a href="{{ item.link }}" class="breadcrumbs__link">{{ item.title }}</a>
+			</li><li class="breadcrumbs__separator">/</li>
+		{%- endfor %}
+		{% if page.title %}
+			<li class="breadcrumbs__item">{{ page.title }}</li>
+		{% endif %}
+	</ul>
+</div>

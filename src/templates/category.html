@@ -1,0 +1,19 @@
+{% set category = [
+	{"link": "#", "image": "./images/category1.jpg", "title": "светильники", "type": "red"},
+	{"link": "#", "image": "./images/category2.jpg", "title": "Посуда", "type": "green"},
+	{"link": "#", "image": "./images/category3.jpg", "title": "Товары для сада", "type": "purpur"}
+]%}
+
+<ul class="category">
+	{% for item in category -%}
+		<li class="category__item">
+			<a href="{{ item.link }}" class="category__link">
+				<img src="{{ item.image }}" alt="{{ item.title }}" class="category__image" />
+				<span class="category__description category__description_type_{{ item.type }}">
+					<span class="category__title">{{ item.title }}</span>
+					<span class="category__arrow">низкие цены</span>
+				</span>
+			</a>
+		</li>
+	{%- endfor %}
+</ul>

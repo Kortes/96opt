@@ -1,0 +1,50 @@
+@import "var";
+
+.shares{
+	margin: 0 -5px 30px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	&__item{
+		width: 240px;
+		margin: 0 5px 10px;
+
+		&_color{
+			&_green{
+				background: @c-bg;
+			}
+
+			&_purpur{
+				background: @c-purpur-dbldark;
+			}
+
+			&_red{
+				background: @c-red;
+			}
+
+			&_blue{
+				background: @c-blue;
+			}
+		}
+	}
+
+	&__link{
+		display: block;
+		height: 90px;
+		position: relative;
+	}
+
+	&__image{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: auto;
+		height: auto;
+		max-width: 240px;
+		max-height: 90px;
+	}
+}

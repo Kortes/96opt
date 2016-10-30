@@ -1,0 +1,29 @@
+{% set brands = [
+	{"link": "#", "image": "./images/brand1.png"},
+	{"link": "#", "image": "./images/brand2.png"},
+	{"link": "#", "image": "./images/brand3.png"},
+	{"link": "#", "image": "./images/brand4.png"},
+	{"link": "#", "image": "./images/brand5.png"},
+	{"link": "#", "image": "./images/brand1.png"},
+	{"link": "#", "image": "./images/brand2.png"},
+	{"link": "#", "image": "./images/brand3.png"},
+	{"link": "#", "image": "./images/brand4.png"},
+	{"link": "#", "image": "./images/brand5.png"}
+]%}
+
+<div class="brands clearfix">
+	<div class="brands__title">Наши бренды</div>
+	<div class="brands__carousel">
+		<a href="#" class="brands__arrow brands__arrow_prev"></a>
+		<a href="#" class="brands__arrow brands__arrow_next"></a>
+		<ul class="brands__list">
+			{% for item in brands -%}
+				<li class="brands__item">
+					<a href="{{ item.link }}" class="brands__link">
+						<img src="{{ item.image }}" alt="" class="brands__image" />
+					</a>
+				</li>
+			{%- endfor %}
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,71 @@
+@import "var";
+
+.category{
+	margin:0 -10px 30px;
+	display: flex;
+	justify-content: space-between;
+
+	&__item{
+		margin: 0 10px 10px;
+		width: 320px;
+	}
+
+	&__link{
+		position: relative;
+		text-decoration: none !important;
+		color: @c-white;
+		height: 210px;
+		display: block;
+		overflow: hidden;
+	}
+
+	&__image{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&__description{
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 10px;
+		text-align: center;
+
+		&_type_red{
+			background: fade(@c-red, 66%);
+		}
+
+		&_type_green{
+			background: fade(@c-green, 83%);
+		}
+
+		&_type_purpur{
+			background: fade(@c-purpur, 83%);
+		}
+	}
+
+	&__title{
+		text-transform: uppercase;
+		display: block;
+		font-weight: 600;
+		font-size: 24px;
+	}
+
+	&__arrow{
+		display: block;
+		font-size: 18px;
+		font-weight: 500;
+
+		&:before{
+			content: "";
+			display: inline-block;
+			width: 17px;
+			height: 17px;
+			margin: 0 5px -3px 0;
+			background: url(../images/category-arrow.png) no-repeat;
+		}
+	}
+}

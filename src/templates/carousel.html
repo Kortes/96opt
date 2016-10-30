@@ -1,0 +1,28 @@
+<div class="carousel {% if carousel.color %}carousel_color_{{ carousel.color }}{% endif %}">
+	<div class="carousel__head">
+		<span class="carousel__head-title">{{ carousel.title }}</span>
+	</div>
+	<a href="#" class="carousel__arrow carousel__arrow_prev"></a>
+	<a href="#" class="carousel__arrow carousel__arrow_next"></a>
+	<ul class="carousel__list">
+		{% for item in carousel.list -%}
+			<li class="carousel__item">
+				<div class="carousel__checkbox carousel__checkbox_comparison">
+					<input type="checkbox" class="carousel__check" id="comparison_{{loop.index}}" {% if item.comparison %}checked{% endif %}>
+					<label for="comparison_{{loop.index}}" class="carousel__label"></label>
+				</div>
+				<div class="carousel__checkbox carousel__checkbox_liked">
+					<input type="checkbox" class="carousel__check" id="liked_{{loop.index}}" {% if item.liked %}checked{% endif %}>
+					<label for="liked_{{loop.index}}" class="carousel__label"></label>
+				</div>
+				<a href="{{ item.link }}" class="carousel__link">
+					<span class="carousel__image">
+						<img src="{{ item.image }}" alt="{{ item.title }}" class="carousel__img" />
+					</span>
+					<span class="carousel__title">{{ item.title }}</span>
+					<span class="carousel__price">{{ item.price }}</span>
+				</a>
+			</li>
+		{%- endfor %}
+	</ul>
+</div>

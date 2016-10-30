@@ -1,0 +1,17 @@
+{% set info = [
+	{"link": "#", "type": "order", "title": "Как сделать заказ?"},
+	{"link": "#", "type": "payment", "title": "Как оплатить товар?"},
+	{"link": "#", "type": "delivery", "title": "Доставка"},
+	{"link": "#", "type": "pickup", "title": "Самовывоз"}
+]%}
+
+<ul class="info">
+	{% for item in info -%}
+		<li class="info__item info__item_type_{{ item.type }}">
+			<a href="{{ item.link }}" class="info__link">
+				<span class="info__ico"></span>
+				<span class="info__title">{{ item.title }}</span>
+			</a>
+		</li>
+	{%- endfor %}
+</ul>

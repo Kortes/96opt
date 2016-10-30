@@ -1,0 +1,49 @@
+@import "var";
+
+.info{
+	margin: 0 0 25px 240px;
+	background: @c-green-light;
+	padding: 16px 0 16px 25px;
+	display: flex;
+	justify-content: space-between;
+
+	&__item{
+		height: 64px;
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		&_type_order .info__ico{
+			background-position: top left;
+		}
+
+		&_type_payment .info__ico{
+			background-position: bottom left;
+		}
+
+		&_type_delivery .info__ico{
+			background-position: top right;
+		}
+
+		&_type_pickup .info__ico{
+			background-position: bottom right;
+		}
+	}
+
+	&__link{
+		padding: 0 20px 0 75px;
+		display: block;
+		color: @c-text;
+		font-size: 15px;
+	}
+
+	&__ico{
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url(../images/info.png) no-repeat;
+		width: 64px;
+		height: 64px;
+		border-radius: 50%;
+	}
+}

@@ -1,0 +1,70 @@
+{% set header = {
+	"logo": "./images/logo.png",
+	"menu": [
+		{"link": "#", "title": "Прайс-лист"},
+		{"link": "#", "title": "Помощь"},
+		{"link": "#", "title": "Франшиза"},
+		{"link": "#", "title": "О компании"},
+		{"link": "#", "title": "Партнерам"},
+		{"link": "#", "title": "Контакты"}
+	],
+	"city": "Екатеринбург",
+	"phone": "8 800 775 3116",
+	"sotial": [
+		{"type": "vk", "link": "#"},
+		{"type": "ok", "link": "#"},
+		{"type": "instagram", "link": "#"},
+		{"type": "fb", "link": "#"}
+	]
+}%}
+
+<div class="header">
+	<div class="container clearfix">
+		<div class="header__logo">
+			<a href="/" class="logo">
+				<img src="{{ header.logo }}" class="logo__image" >
+			</a>
+			<div class="header__description">Поставщик посуды №1 в России</div>
+		</div>
+		<div class="header__content">
+			<div class="header__top">
+				<div class="header__city">
+					Ваш город:
+					<a href="#" class="header__city-link">{{ header.city }}</a>
+				</div>
+				<ul class="header__menu">
+					{% for item in header.menu -%}
+						<li class="header__menu-item">
+							<a href="{{ item.link }}" class="header__menu-link">{{ item.title }}</a>
+						</li>
+					{%- endfor %}
+				</ul>
+			</div>
+			<div class="header__contact">
+				<ul class="header__sotial">
+					{% for item in header.sotial -%}
+						<li class="header__sotial-item header__sotial-item_{{ item.type }}">
+							<a href="{{ item.link }}" class="header__sotial-link"></a>
+						</li>
+					{%- endfor %}
+				</ul>
+				<div class="header__phone">
+					<div class="header__phone-text">
+						Звонок по России<br>бесплатный
+					</div>
+					<div class="header__phone-number">{{ header.phone }}</div>
+				</div>
+				<a href="#call" class="fancybox-link header__call">Перезвоните мне</a>
+			</div>
+			<div class="header__bottom">
+				<div class="header__reg">
+					<a href="#" class="header__reg-link">Регистрация</a>
+					<a href="#" class="header__reg-link">Вход</a>
+				</div>
+				<div class="header__search">
+					{% include 'search.html' %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+      <link rel="stylesheet" href="css/main.css" />
+      <title>{% block title %}{% endblock %} - 96opt</title>
+      <meta charset='utf-8'>
+      <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+      <meta name='description' content=''>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% endblock %}
+</head>
+<body class="page {% block pageClass %}{% endblock %}">
+    <div class="page__inner">
+      {% block header %}
+        {% include 'header.html' %}
+        {% include 'header-line.html' %}
+      {% endblock %}
+      <div class="container page__container">
+        {% block content %}{% endblock %}
+      </div>
+      <div class="page__footer"></div>
+    </div>
+    {% block footer %}
+      {% include 'footer.html' %}
+    {% endblock %}
+    <div class="hide">
+      {% include 'fancybox.html' %}
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="ui/fancybox/fancybox.js"></script>
+    {% block script %}{% endblock %}
+    <script src='js/main.js'></script>
+</body>
+</html>

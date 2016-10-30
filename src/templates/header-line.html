@@ -1,0 +1,20 @@
+{% set stock = [
+	{"link": "#", "title": "НОВИНКИ", "type": "new"},
+	{"link": "#", "title": "СПЕЦПРЕДЛОЖЕНИЯ", "type": "spec"},
+	{"link": "#", "title": "ХИТЫ ПРОДАЖ", "type": "hit"},
+	{"link": "#", "title": "АКЦИИ", "type": "stock"}
+]%}
+
+<div class="header-line">
+	<div class="container">
+		<div class="header-line__wrapper">
+			{% include 'menu.html' %}
+		
+			{% for item in stock -%}
+				<a href="{{ item.link }}" class="header-line__link header-line__link_type_{{ item.type }}">
+					<span class="header-line__ico"></span><span class="header-line__title">{{ item.title }}</span>
+				</a>
+			{%- endfor %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+{% set promo = [
+	{"link": "#", "image": "./images/promo.jpg", "desc": "Описание"},
+	{"link": "#", "image": "./images/promo.jpg", "desc": "Описание"},
+	{"link": "#", "image": "./images/promo.jpg", "desc": "Описание"},
+	{"link": "#", "image": "./images/promo.jpg", "desc": "Описание"},
+	{"link": "#", "image": "./images/promo.jpg", "desc": "Описание"},
+	{"link": "#", "image": "./images/promo.jpg", "desc": "Описание"},
+	{"link": "#", "image": "./images/promo.jpg", "desc": "Описание"},
+	{"link": "#", "image": "./images/promo.jpg", "desc": "Описание"}
+]%}
+
+<div class="promo">
+	<ul class="promo__carousel">
+		{% for item in promo -%}
+			<li class="promo__item">
+				<a href="{{ item.link }}" class="promo__link">
+					<img src="{{ item.image }}" alt="{{ item.desc }}" class="promo__image" />
+				</a>
+			</li>
+		{%- endfor %}
+	</ul>
+	<ul class="promo__controls">
+		{% for item in promo -%}
+			<li class="promo__point {% if loop.first %}promo__point_active{% endif %}"></li>
+		{%- endfor %}
+	</ul>
+</div>

@@ -1,0 +1,151 @@
+@media (max-width: 992px) {
+	.footer{
+		height: auto;
+	}
+	
+	.header-line__title{
+		display: none;
+	}
+
+	.info__title{
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.container{
+		padding: 0 20px;
+	}
+
+	.page{
+		&__inner{
+			min-height: auto;
+		}
+
+		&__footer{
+			display: none;
+		}
+	}
+
+	.header{
+		&__logo{
+			float: none;
+			width: 100%;
+		}
+
+		&__content{
+			padding: 0;
+		}
+
+		&__top{
+			display: block;
+			padding-top: 10px;
+		}
+
+		&__contact{
+			text-align: center;
+		}
+
+		&__phone{
+			padding: 5px 0;
+		}
+
+		&__search{
+			clear: right;
+			padding-top: 10px;
+		}
+	}
+
+	.footer{
+		height: auto;
+		margin-top: 0;
+
+		&__item{
+			display: block;
+			width: auto;
+			padding: 0 !important;
+		}
+	}
+
+	.singup{
+		width: 100%;
+	}
+
+	.shares{
+		&__item{
+			width: 100%;
+		}
+	}
+
+	.carousel{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.category{
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.brands{
+		margin-bottom: 40px;
+
+		&__title{
+			float: none;
+			width: auto;
+			margin-bottom: 10px;
+		}
+	}
+
+	.promo{
+		margin-left: 0;
+	}
+
+	.info{
+		margin-left: 0;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		&__item{
+			margin: 10px 0;
+		}
+	}
+
+	.menu{
+		margin-right: 10px;
+		width: auto;
+
+		&_open{
+			.menu__list{
+				display: none;
+			}
+
+			&:before{
+				display: none;
+			}
+		}
+
+		&__button{
+			padding-left: 12px;
+
+			&-title{
+				display: none;
+			}
+		}
+
+		&__wrapper{
+			width: auto;
+			position: static;
+		}
+	}
+
+	.header-line{
+		&__link{
+			padding-right: 0;
+		}
+
+		&__wrapper{
+			justify-content: space-between;
+		}
+	}
+}
